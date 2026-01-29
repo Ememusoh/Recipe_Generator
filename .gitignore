@@ -4,9 +4,5 @@ __pycache__/
 .env
 .ipynb_checkpoints/
 
-/rag_project/database
-/knowledgebase
-/rag_project/rag_practice.ipynb
-/rag_project/RAG.ipynb
-/rag_project/simpleRAG.ipynb
-/rag_project/database/Nigerian Palatable meals.csv
+/database
+
