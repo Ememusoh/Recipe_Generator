@@ -4,5 +4,4 @@ __pycache__/
 .env
 .ipynb_checkpoints/
 
-/database/Nigerian Palatable meals.csv
-
+database/Nigerian Palatable meals.csv
