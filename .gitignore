@@ -1,9 +1,11 @@
 .venv/
-__pycache__/
+app/__pycache__/
 *.pyc
 .env
 .ipynb_checkpoints/
 
 database/Nigerian Palatable meals.csv
+
+
 
 
