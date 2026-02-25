@@ -1,25 +1,55 @@
-# Recipe Agent RAG 
+# Recipe Assistant Chatbot
+![App Demo](video.gif)
 
-This project implements a **Retrieval-Augmented Generation (RAG) agent** that creates recipes from user-provided ingredients using **LangChain, Tavily, and OpenAI**.
+This project implements an **LLM-powered recipe assistant** that helps users decide what to cook using ingredients they already have at home. The app takes user-provided ingredients, searches the web for relevant recipe ideas using **Tavily Search**, and returns **one recommended recipe** with **step-by-step cooking instructions** and **source links**.
+
+The project uses a **Streamlit frontend** for user interaction and a **FastAPI backend** to handle the recipe-generation workflow.
 
 ## Features
-- User inputs ingredients
-- Agent searches the web for recipes
-- Generates a recipe with step-by-step instructions
-- Cites sources for transparency
-- Interactive Streamlit frontend
-- FastAPI backend for API access
 
-## **Live Demo (Streamlit)**
-You can try the interactive demo here: [Streamlit UI](http://10.0.0.219:8501/)  
+- Accepts user-provided ingredients (e.g., "rice, chicken, garlic, onion")
+- Searches the web for matching recipe ideas using Tavily
+- Uses a LangChain agent with OpenAI to select **one suitable recipe**
+- Returns a structured recipe response with:
+  - recipe name
+  - reason for recommendation
+  - ingredients used
+  - optional pantry items
+  - step-by-step cooking instructions
+  - source link(s)
+- Streamlit UI for interactive use
+- FastAPI backend endpoint for API access
 
-## Architectural workflow
-User → Streamlit → FastAPI → LangChain RAG agent → Tavily → LLM → response
-### Screenshot of Streamlit UI
-![Streamlit Screenshot](streamlit1.png)
+## Tech Stack
 
-## Installation
+- **Python**
+- **LangChain**
+- **OpenAI (GPT-4o-mini)**
+- **Tavily Search**
+- **FastAPI**
+- **Streamlit**
+
+## Project Architecture
+
+User → Streamlit UI → FastAPI API → LangChain Agent → Tavily Search → OpenAI LLM → Response
+
+## Screenshots
+
+### Streamlit UI
+![Streamlit Screenshot](img.png)
+![Streamlit Screenshot](img1.png)
+
+## Project Structure
+
 ```bash
+recipe-rag-agent/
+├── app/
+│   ├── agent_setup.py      # LangChain agent + Tavily tool setup
+│   └── main.py             # FastAPI app (/generate_recipe)
+├── streamlit_app.py        # Streamlit frontend (if named differently, update this)
+├── requirements.txt
+└── README.md
+
 git clone https://github.com/ememusoh/recipe-rag-agent.git
 cd recipe-rag-agent
 python -m venv .venv
