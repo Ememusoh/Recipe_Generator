@@ -1,6 +1,6 @@
 # Recipe Assistant Chatbot
 <!-- ![App Demo](video.gif) -->
-<img src="video.gif" width="800" height="auto" alt="App Demo">
+<img src="video1.gif" width="800" height="auto" alt="App Demo">
 
 This project implements an **LLM-powered recipe assistant** that helps users decide what to cook using ingredients they already have at home. The app takes user-provided ingredients, searches the web for relevant recipe ideas using **Tavily Search**, and returns **one recommended recipe** with **step-by-step cooking instructions** and **source links**.
 
